@@ -4,13 +4,15 @@ const cors = require('cors');
 const app = express();
 
 app.get('/api/customers', cors(), (req, res) => {
-  const customers = [
-    {id: 1, firstName: 'John', lastName: 'Doe'},
-    {id: 2, firstName: 'Brad', lastName: 'Traversy'},
-    {id: 3, firstName: 'Mary', lastName: 'Swanson'},
+  const products = [
+    {id: 1, nazwa: 'Czapka |', cena: '25zl'},
+    {id: 2, nazwa: 'Rekawiczki |', cena: ' 30zl'},
+    {id: 3, nazwa: 'Spodnie |', cena: '80zl'},
+    {id: 4, nazwa: 'Dresy |', cena: '50zl'},
+    {id: 5, nazwa: 'Buty |', cena: '200zl'},
   ];
 
-  res.json(customers);
+  res.json(products);
 });
 
 const port = 5000;

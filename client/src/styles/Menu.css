@@ -1,0 +1,50 @@
+#menu ul {
+  list-style: none;
+}
+#menu ul li {
+  padding: 10px 0;
+  transition: 0.2s;
+}
+
+#menu ul li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding-left: 10px;
+}
+
+#menu ul li:hover {
+  transform: translateX(30px);
+}
+
+#menu ul li .active {
+  transform: translateX(0px);
+  border-left: 10px solid #f7f3ea;
+}
+
+#articleCosmos li {
+  list-style: none;
+  padding-bottom: 15px;
+}
+#articleCosmos li:nth-child(0) {
+  padding-top: 15px;
+}
+
+form h3 {
+  padding: 20px 0;
+}
+form textarea {
+  width: 50%;
+  height: 100px;
+  margin: 0 auto;
+}
+
+form button {
+  display: block;
+  padding: 8px;
+  background-color: #fff;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}

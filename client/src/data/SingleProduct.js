@@ -1,27 +1,27 @@
 import React, { Component } from 'react';
-import './customers.css';
+import './products.css';
 
 class Customers extends Component {
   constructor() {
     super();
     this.state = {
-      customers: []
+      products: []
     };
   }
 
   componentDidMount() {
     fetch('/api/customers')
       .then(res => res.json())
-      .then(customers => this.setState({customers}, () => console.log('Customers fetched...', customers)));
+      .then(products => this.setState({products}, () => console.log('Customers fetched...', products)));
   }
 
   render() {
     return (
       <div>
-        <h2>Customers</h2>
-        <ul>
-        {this.state.customers.map(customer => 
-          <li key={customer.id}>{customer.firstName} {customer.lastName}</li>
+       
+        <ul className='dataUl'>
+        {this.state.products.map(products => 
+          <li key={products.id}>{products.nazwa} {products.cena}</li>
         )}
         </ul>
       </div>

@@ -1,20 +1,39 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Customers from './components/customers';
+import './styles/App.css';
+import {BrowserRouter as Router} from 'react-router-dom';
+
+import Header from './SPA_elements/Header';
+import Menu from './SPA_elements/Menu';
+import Pages from './SPA_elements/Pages';
+import Footer from "./SPA_elements/Footer";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">React Express Starter</h1>
-        </header>
-        <Customers />
-      </div>
-    );
+
+  state = {  }
+
+  render() { 
+    return ( 
+     <Router basename = {process.env.PUBLIC_URL}>
+       <div className="container">
+         <header>
+           <Header />
+         </header>
+         <main>
+             <aside>
+                  <Menu />
+             </aside>
+             <section>
+                 <Pages />
+             </section>
+         </main>
+         <footer>
+           <Footer />
+         </footer>
+       </div>
+
+      </Router>
+     );
   }
 }
-
+ 
 export default App;
