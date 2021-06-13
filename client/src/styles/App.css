@@ -59,3 +59,63 @@ footer {
 #oneProduct div p {
   margin: 20px;
 }
+
+@media (max-width: 700px) and (orientation: landscape) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  main aside {
+    background-color: cadetblue;
+    font-size: 14px;
+    margin: 0 auto;
+    width: 80vw;
+  }
+  #menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  section h2 {
+    font-size: 1em;
+  }
+  section p {
+    font-size: 12px;
+  }
+  #productList div {
+    font-size: 22px;
+  }
+  #productList ul {
+    font-size: 12px;
+  }
+  #adminLogin label,
+  #adminLogin input {
+    padding: 3px 8px;
+  }
+}
+@media (max-width: 400px) and (orientation: portrait) {
+  .container header {
+    display: none;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  main aside {
+    background-color: cadetblue;
+    margin: 0 auto;
+    width: 80vw;
+  }
+  section h2 {
+    font-size: 1em;
+  }
+  section p {
+    font-size: 12px;
+  }
+  #productList div {
+    font-size: 22px;
+  }
+  #productList ul {
+    font-size: 12px;
+  }
+}
